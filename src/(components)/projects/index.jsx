@@ -8,7 +8,7 @@ import mockup4 from "@/public/images/Mockup 04.png";
 
 const projects = [
   {
-    title: "EDUFRIEND",
+    title: "RBOTBUILDER",
     description: "UI/UX",
     src: mockup1,
   },
