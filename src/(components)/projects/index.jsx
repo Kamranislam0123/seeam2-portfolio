@@ -31,23 +31,23 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="box-border py-12" id="projects">
-      <div className="container mx-auto">
-        <div className="flex flex-row justify-between items-center w-full mb-8">
-          <h1 className="text-[36px] font-bold text-[#DAC5A7]">MY PROJECTS</h1>
+    <section className="box-border py-8 sm:py-12" id="projects">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full mb-6 sm:mb-8">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#DAC5A7] mb-4 sm:mb-0">MY PROJECTS</h1>
           <div className="flex flex-row items-center gap-2">
-            <ArrowIcon />
-            <div className="text-[24px] font-bold text-[#DAC5A7]">
+            <ArrowIcon className="w-5 h-5 sm:w-6 sm:h-6" />
+            <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#DAC5A7]">
               SEE ALL PROJECTS
             </div>
           </div>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 px-9 py-9">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative border border-solid border-[rgba(218,197,167,0.25)] bg-[rgba(218,197,167,0.05)] flex w-full md:w-[47%] h-[584px] flex-col justify-evenly items-start"
+              className="relative border border-solid border-[rgba(218,197,167,0.25)] bg-[rgba(218,197,167,0.05)] flex flex-col justify-evenly items-start aspect-[3/4] sm:aspect-[4/5]"
             >
               <div className="w-full h-full relative">
                 <Image
@@ -58,11 +58,11 @@ const Projects = () => {
                   className="rounded"
                 />
 
-                <div className="absolute bottom-4 left-4 right-4 rounded-b flex flex-row justify-between items-center px-6 py-2 border border-[rgba(218,197,167,0.25)] bg-[rgba(218,197,167,0.05)] backdrop-blur-lg">
-                  <h2 className="text-2xl font-semibold text-[#DAC5A7]">
+                <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 right-2 sm:right-4 rounded-b flex flex-row justify-between items-center px-3 sm:px-6 py-2 border border-[rgba(218,197,167,0.25)] bg-[rgba(218,197,167,0.05)] backdrop-blur-lg">
+                  <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold text-[#DAC5A7]">
                     {project.title}
                   </h2>
-                  <p className="text-lg text-[#DAC5A7]">{project.description}</p>
+                  <p className="text-sm sm:text-base lg:text-lg text-[#DAC5A7]">{project.description}</p>
                 </div>
               </div>
             </div>

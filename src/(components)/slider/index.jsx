@@ -11,26 +11,54 @@ import 'swiper/css/autoplay';
 
 const Slider = () => {
     return (
-        <section className='box-border bg-[#181716] border border-1 border-solid border-[#DAC5A7]border  border-[rgba(218,197,167,0.25)] p-4  '>
-            <div className='container mx-auto '>
+        <section className='box-border bg-[#181716] border border-1 border-solid border-[#DAC5A7] border-[rgba(218,197,167,0.25)] py-2 sm:py-4'>
+            <div className='container mx-auto px-2 sm:px-4'>
                 <Swiper
                     modules={[Autoplay]}  
-                    spaceBetween={30}  
-                    slidesPerView={7}  
+                    spaceBetween={5}  
+                    slidesPerView={4}  
                     loop={true}  
-                    speed={3000}  // Adjust speed for smoother transition
+                    speed={3000}  
                     autoplay={{
-                        delay: 0,  // Set delay to 0 for continuous autoplay
-                        disableOnInteraction: false,  // Keep autoplay even after user interaction
+                        delay: 0,  
+                        disableOnInteraction: false,  
+                    }}
+                    breakpoints={{
+                        320: {
+                            slidesPerView: 3,
+                            spaceBetween: 5
+                        },
+                        480: {
+                            slidesPerView: 3,
+                            spaceBetween: 10
+                        },
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 15
+                        },
+                        768: {
+                            slidesPerView: 2.5,
+                            spaceBetween: 20
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 25
+                        }
                     }}
                 >
                     {[...Array(10)].map((_, index) => (
                         <SwiperSlide key={index}>
-                            <div className='flex flex-row gap-2  items-center justify-center'>
-                                <div className='text-2xl text-primary font-bold'>
+                            <div className='flex items-center justify-center py-1 sm:py-2'>
+                                <span className='text-xs sm:text-sm md:text-base lg:text-lg text-[#DAC5A7] font-bold whitespace-nowrap mr-1'>
                                     Let&apos;s Talk
-                                </div>
-                                <Image src={star} alt='star' />
+                                </span>
+                                <Image 
+                                    src={star} 
+                                    alt='star' 
+                                    width={12} 
+                                    height={12} 
+                                    className="w-2 h-2 sm:w-3 sm:h-3 md:w-4 md:h-4 lg:w-5 lg:h-5" 
+                                />
                             </div>
                         </SwiperSlide>
                     ))}

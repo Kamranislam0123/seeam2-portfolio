@@ -28,7 +28,16 @@ const Header = () => {
           <div className="flex justify-between items-center md:hidden">
             {/* Logo for mobile */}
             <Image priority src={logo} alt="logo" className="w-10 h-10" />
-            
+            <div className=" flex flex-row justify-center items-center gap-4">
+              <div className="text-[18px] text-[#DAC5A7] ">
+                <p>SEEAM </p>
+              </div>
+              <a href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=hello@seeamahmod.info" className="bg-[#DAC5A7] text-black px-4 py-2 hover:bg-opacity-80 transition-all text-sm inline-block">
+                LET&apos;S TALK
+              </a>
+
+            </div>
+
             {/* Mobile Menu Icon */}
             <button onClick={toggleMenu} className="text-[#DAC5A7] focus:outline-none">
               {isOpen ? <FiX size={30} /> : <FiMenu size={30} />}

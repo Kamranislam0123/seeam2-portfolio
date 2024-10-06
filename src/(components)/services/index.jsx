@@ -14,30 +14,30 @@ const Services = () => {
     ];
 
     return (
-        <section className="box-border py-12" id="service">
-            <div className="container mx-auto">
+        <section className="box-border py-8 sm:py-12" id="service">
+            <div className="container mx-auto px-4">
                 <div
-                    className="flex flex-row justify-center items-center space-x-2 mb-8"
+                    className="flex flex-row justify-center items-center space-x-2 mb-6 sm:mb-8"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     <ArrowIcon direction={isHovered ? "down" : "right"} />
-                    <h1 className="text-3xl font-bold">My Services</h1>
+                    <h1 className="text-2xl sm:text-3xl font-bold">My Services</h1>
                 </div>
 
-                <div className="flex flex-wrap justify-center gap-6 px-9 py-9">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="border border-solid border-[rgba(218,197,167,0.25)] bg-[rgba(218,197,167,0.05)] flex w-full md:w-[47%] h-[290px] px-9  flex-col justify-evenly items-start"
+                            className="border border-solid border-[rgba(218,197,167,0.25)] bg-[rgba(218,197,167,0.05)] flex flex-col justify-between p-6 sm:p-9 h-full"
                         >
-                            <div className="pt-9">
-                                <h2 className="text-[24px]  text-[#DAC5A7] font-semibold pb-2">{service.title}</h2>
-                                <p className="text-[18px] font-light text-[#DAC5A7] ">{service.description}</p>
+                            <div>
+                                <h2 className="text-xl sm:text-2xl text-[#DAC5A7] font-semibold pb-2">{service.title}</h2>
+                                <p className="text-base sm:text-lg font-light text-[#DAC5A7]">{service.description}</p>
                             </div>
-                            <div className="flex flex-row ">
-                                <ArrowIcon className="text-[#DAC5A7] w-8 h-8" />
-                                <button className="text-[#DAC5A7] hover:underline ml-2 text-[18px] font-light"> LET&apos;S TALK</button>
+                            <div className="flex flex-row items-center mt-4">
+                                <ArrowIcon className="text-[#DAC5A7] w-6 h-6 sm:w-8 sm:h-8" />
+                                <button className="text-[#DAC5A7] hover:underline ml-2 text-base sm:text-lg font-light">LET&apos;S TALK</button>
                             </div>
                         </div>
                     ))}

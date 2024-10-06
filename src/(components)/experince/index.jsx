@@ -46,41 +46,40 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section className="box-border py-12">
-            <div className="container mx-auto">
+        <section className="box-border py-8 sm:py-12">
+            <div className="container mx-auto px-4">
                 <div className="flex flex-col justify-between items-center w-full mb-8">
                     <div>
-                        <p className="text-xl  text-[#DAC5A7]">JOURNEY TILL NOW</p>
+                        <p className="text-lg sm:text-xl text-[#DAC5A7] mb-2">JOURNEY TILL NOW</p>
                     </div>
-                    <h1 className="text-8xl  text-[#DAC5A7]">MY EXPERIENCE</h1>
+                    <h1 className="text-4xl sm:text-6xl lg:text-8xl text-center text-[#DAC5A7]">MY EXPERIENCE</h1>
                 </div>
             </div>
-            <div className="relative container mx-auto px-11">
-                <div className="absolute w-1 bg-[#DAC5A7] h-full left-1/2 transform -translate-x-1/2"></div>
+            <div className="relative container mx-auto px-4 sm:px-6 lg:px-11">
+                <div className="absolute w-1 bg-[#DAC5A7] h-full left-4 sm:left-1/2 transform sm:-translate-x-1/2"></div>
                 {experiences.map((exp, index) => (
                     <div
                         key={index}
-                        className={` flex ${index % 2 === 0 ? "justify-start" : "justify-end"
-                            } items-center w-full px-11`}
+                        className={`flex flex-col sm:flex-row ${index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
+                            } items-start sm:items-center w-full mb-8 sm:mb-0 sm:px-11`}
                     >
-                        <div className="w-10 h-10 bg-[#d7bea8] rounded-full flex items-center justify-center text-black font-bold text-lg absolute left-1/2 transform -translate-x-1/2">
+                        <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#d7bea8] rounded-full flex items-center justify-center text-black font-bold text-base sm:text-lg absolute left-0 sm:left-1/2 transform sm:-translate-x-1/2 mt-1 sm:mt-0">
                             {index + 1}
                         </div>
                         <div
-                            className={`bg-[#181716] text-[#DAC5A7] px-9 py-9 border border-solid border-[rgba(218,197,167,0.25)] w-[450px] h-[314px] ${index % 2 === 0 ? "mx-4" : "my-4"
+                            className={`bg-[#181716] text-[#DAC5A7] px-6 sm:px-9 py-6 sm:py-9 border border-solid border-[rgba(218,197,167,0.25)] w-full sm:w-[450px] ml-12 sm:ml-0 ${index % 2 === 0 ? "sm:mr-4" : "sm:ml-4"
                                 } flex flex-col justify-center items-start `}
                         >
-                            <div className="flex flex-row">
-
-                                <div className=" width={50} height={50} mr-2">
-                                    {exp.icon}
+                            <div className="flex flex-row items-center">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 mr-2">
+                                    <Image src={exp.icon.props.src} alt={exp.company} width={50} height={50} />
                                 </div>
                                 <div className="flex flex-col">
-                                    <p className="font-bold">{exp.date}</p>
-                                    <h3 className="text-[18px] font-light mt-1">{exp.company}</h3></div>
-
+                                    <p className="font-bold text-sm sm:text-base">{exp.date}</p>
+                                    <h3 className="text-base sm:text-lg font-light mt-1">{exp.company}</h3>
+                                </div>
                             </div>
-                            <p className="mt-2 text-[18px] font-light">{exp.description}</p>
+                            <p className="mt-2 text-sm sm:text-base font-light">{exp.description}</p>
                         </div>
                     </div>
                 ))}

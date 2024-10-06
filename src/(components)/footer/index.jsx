@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import logo from "@/public/images/logo.svg";
 
-
 const Footer = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isHovered, setIsHovered] = useState(false);
@@ -33,21 +32,20 @@ const Footer = () => {
     }, []);
 
     return (
-        <footer>
-            <section className="box-border py-12 bg-[#181716]">
-                <div className="container mx-auto">
+        <footer className="bg-[#181716] text-[#DAC5A7]">
+            <section className="box-border py-8 sm:py-12">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col mb-8">
                         {/* Logo */}
-                        <div className="mb-6 ml-24">
-                            <Image src={logo} alt="logo" className="w-[60px] h-[80px]" />
+                        <div className="mb-6 flex justify-center sm:justify-start">
+                            <Image src={logo} alt="logo" className="w-[40px] h-[60px] sm:w-[60px] sm:h-[80px]" />
                         </div>
 
                         {/* 4 Rows with Lists */}
-                        <div className="flex flex-wrap ">
-                            {/* Row 1 */}
-                            <div className="w-full sm:w-1/2 md:w-1/4 mb-6 flex flex-col  items-center">
-
-                                <ul className="space-y-2 text-center">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                            {/* Social Media Links */}
+                            <div className="flex flex-col items-center sm:items-start">
+                                <ul className="space-y-2">
                                     <li className="flex items-center justify-center gap-2">
                                         <div className="rounded-full bg-[#DAC5A726] p-2 flex items-center justify-center">
                                             <svg
@@ -126,7 +124,7 @@ const Footer = () => {
                                                 className="bi bi-dribbble"
                                                 viewBox="0 0 16 16"
                                             >
-                                                <path fill-rule="evenodd" d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8zm5.284 3.688a6.802 6.802 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A6.95 6.95 0 0 1 8 1.18zm-2.907.642A43.123 43.123 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.865 6.865 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.817 6.817 0 0 1-1.752-4.564zM8 14.837a6.785 6.785 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.246 28.246 0 0 1 1.457 5.18A6.722 6.722 0 0 1 8 14.837z" />
+                                                <path fillrule="evenodd" d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8c4.408 0 8-3.584 8-8s-3.592-8-8-8zm5.284 3.688a6.802 6.802 0 0 1 1.545 4.251c-.226-.043-2.482-.503-4.755-.217-.052-.112-.096-.234-.148-.355-.139-.33-.295-.668-.451-.99 2.516-1.023 3.662-2.498 3.81-2.69zM8 1.18c1.735 0 3.323.65 4.53 1.718-.122.174-1.155 1.553-3.584 2.464-1.12-2.056-2.36-3.74-2.551-4A6.95 6.95 0 0 1 8 1.18zm-2.907.642A43.123 43.123 0 0 1 7.627 5.77c-3.193.85-6.013.833-6.317.833a6.865 6.865 0 0 1 3.783-4.78zM1.163 8.01V7.8c.295.01 3.61.053 7.02-.971.199.381.381.772.555 1.162l-.27.078c-3.522 1.137-5.396 4.243-5.553 4.504a6.817 6.817 0 0 1-1.752-4.564zM8 14.837a6.785 6.785 0 0 1-4.19-1.44c.12-.252 1.509-2.924 5.361-4.269.018-.009.026-.009.044-.017a28.246 28.246 0 0 1 1.457 5.18A6.722 6.722 0 0 1 8 14.837z" />
                                             </svg>
                                         </div>
                                         <a href="https://www.linkedin.com/in/seeamahmod/" className="hover:text-blue-500 uppercase">
@@ -136,9 +134,9 @@ const Footer = () => {
                                 </ul>
                             </div>
 
-                            {/* Row 2 */}
-                            <div className="w-full sm:w-1/2 md:w-1/4 mb-6 flex flex-col items-center ">
-                                <ul className="space-y-2 text-start ">
+                            {/* Navigation Links */}
+                            <div className="flex flex-col items-center sm:items-start">
+                                <ul className="space-y-2 text-center sm:text-left">
                                     <li>
                                         <a href="#" className="hover:text-blue-500 uppercase">
                                             Home
@@ -167,9 +165,9 @@ const Footer = () => {
                                 </ul>
                             </div>
 
-                            {/* Row 3 */}
-                            <div className="w-full sm:w-1/2 md:w-1/4 mb-6 flex flex-col items-center">
-                                <ul className="space-y-2 text-start ">
+                            {/* Additional Links 1 */}
+                            <div className="flex flex-col items-center sm:items-start">
+                                <ul className="space-y-2 text-center sm:text-left">
                                     <li>
                                         <a href="#" className="hover:text-blue-500 uppercase">
                                             Careers
@@ -193,9 +191,9 @@ const Footer = () => {
                                 </ul>
                             </div>
 
-                            {/* Row 4 */}
-                            <div className="w-full sm:w-1/2 md:w-1/4 mb-6 flex flex-col items-center">
-                                <ul className="space-y-2 text-start ">
+                            {/* Additional Links 2 */}
+                            <div className="flex flex-col items-center sm:items-start">
+                                <ul className="space-y-2 text-center sm:text-left">
                                     <li>
                                         <a href="#" className="hover:text-blue-500 uppercase">
                                             Poduct Design
@@ -216,7 +214,8 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-row justify-end items-center space-x-4">
+                    <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+                        <p className="text-sm sm:text-base">&copy; SEEAM AHMOD 2024 ALL RIGHTS RESERVED</p>
                         
                         <a
                             href="https://wa.me/8801306409978"
@@ -224,13 +223,13 @@ const Footer = () => {
                             rel="noopener noreferrer"
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
-                            className="bg-[#DAC5A70D] backdrop-filter backdrop-blur-sm text-primary px-4 py-2 rounded hover:bg-[#DAC5A726] transition duration-300 flex items-center justify-center space-x-2 border border-[#DAC5A733]"
+                            className="bg-[#DAC5A70D] backdrop-filter backdrop-blur-sm text-primary px-3 py-2 sm:px-4 sm:py-2 rounded hover:bg-[#DAC5A726] transition duration-300 flex items-center justify-center space-x-2 border border-[#DAC5A733] text-sm sm:text-base"
                         >
-                            <div className="rounded-full bg-[#DAC5A726] p-2 flex items-center justify-center">
+                            <div className="rounded-full bg-[#DAC5A726] p-1 sm:p-2 flex items-center justify-center">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
-                                    width="20"
-                                    height="20"
+                                    width="16"
+                                    height="16"
                                     fill="currentColor"
                                     className="bi bi-whatsapp"
                                     viewBox="0 0 16 16"
@@ -238,26 +237,23 @@ const Footer = () => {
                                     <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z" />
                                 </svg>
                             </div>
-                            <span>{isHovered ? "+880 1306-409978" : "Direct Message"}</span>
+                            <span className="hidden sm:inline">{isHovered ? "+880 1306-409978" : "Direct Message"}</span>
+                            <span className="sm:hidden">Message</span>
                         </a>
-                    </div>
-                    {/* Copyright */}
-                    <div className="relative text-center py-4">
-                        <p>&copy; SEEAM AHMOD 2024 ALL RIGHTS RESERVED</p>
-                        {isVisible && (
-                            <button
-                                onClick={scrollToTop}
-                                className="fixed bottom-8 right-8 backdrop-filter backdrop-blur-sm bg-[#DAC5A70D] hover:bg-[#C5B190] text-white p-3 rounded-full transition-all duration-300 shadow-lg border border-[#DAC5A733]"
-                                aria-label="Scroll to top"
-                            >
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
-                                </svg>
-                            </button>
-                        )}
                     </div>
                 </div>
             </section>
+            {isVisible && (
+                <button
+                    onClick={scrollToTop}
+                    className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 backdrop-filter backdrop-blur-sm bg-[#DAC5A70D] hover:bg-[#C5B190] text-white p-2 sm:p-3 rounded-full transition-all duration-300 shadow-lg border border-[#DAC5A733]"
+                    aria-label="Scroll to top"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 10l7-7m0 0l7 7m-7-7v18" />
+                    </svg>
+                </button>
+            )}
         </footer>
     );
 };
