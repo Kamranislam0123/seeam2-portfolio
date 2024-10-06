@@ -7,7 +7,7 @@ const Meeting = () => {
                 <div className="flex flex-col gap-2 sm:gap-3 md:gap-4 items-center justify-center text-center">
                     <p className="text-sm sm:text-base md:text-lg lg:text-xl text-primary">ANY PROJECT IN MIND?</p>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                        Let's bring your
+                        Let&apos;s bring your
                     </h2>
                     <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-light leading-tight">
                         Product to Life

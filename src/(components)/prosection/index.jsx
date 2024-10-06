@@ -20,10 +20,10 @@ const Prosection = () => {
                         <Image 
                             src={proimg} 
                             alt='project'
-                            layout='responsive'
+                          fill
                             width={500}
                             height={300}
-                            objectFit='contain'
+                            style={{ objectFit: 'contain' }}
                         />
                     </div>
                     <div className='flex flex-col justify-center w-full lg:w-1/2 text-center lg:text-left'>
