@@ -42,9 +42,10 @@ const Footer = () => {
                         </div>
 
                         {/* 4 Rows with Lists */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
                             {/* Social Media Links */}
-                            <div className="flex flex-col items-center sm:items-start">
+                            <div className=''>
+                            <div className="flex flex-col items-center sm:items-center">
                                 <ul className="space-y-2">
                                     <li className="flex items-center justify-center gap-2">
                                         <div className="rounded-full bg-[#DAC5A726] p-2 flex items-center justify-center">
@@ -133,9 +134,10 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
+                            </div>
 
                             {/* Navigation Links */}
-                            <div className="flex flex-col items-center sm:items-start">
+                            <div className="flex flex-col items-center sm:items-center">
                                 <ul className="space-y-2 text-center sm:text-left">
                                     <li>
                                         <a href="#" className="hover:text-blue-500 uppercase">
@@ -166,7 +168,7 @@ const Footer = () => {
                             </div>
 
                             {/* Additional Links 1 */}
-                            <div className="flex flex-col items-center sm:items-start">
+                            <div className="flex flex-col items-center sm:items-center">
                                 <ul className="space-y-2 text-center sm:text-left">
                                     <li>
                                         <a href="#" className="hover:text-blue-500 uppercase">
@@ -192,7 +194,7 @@ const Footer = () => {
                             </div>
 
                             {/* Additional Links 2 */}
-                            <div className="flex flex-col items-center sm:items-start">
+                            <div className="flex flex-col items-center sm:items-center">
                                 <ul className="space-y-2 text-center sm:text-left">
                                     <li>
                                         <a href="#" className="hover:text-blue-500 uppercase">
@@ -215,7 +217,7 @@ const Footer = () => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row justify-end items-center space-y-4 sm:space-y-0">
-                       
+
 
                         <a
                             href="https://wa.me/8801306409978"
@@ -241,9 +243,9 @@ const Footer = () => {
                             <span className="sm:hidden"> Direct Message</span>
                         </a>
                     </div>
-                   <div className="flex justify-center items-center pt-4">
-                   <p className=" text-sm sm:text-base">&copy; SEEAM AHMOD 2024 ALL RIGHTS RESERVED</p>
-                   </div>
+                    <div className="flex justify-center items-center pt-4">
+                        <p className=" text-sm sm:text-base">&copy; SEEAM AHMOD 2024 ALL RIGHTS RESERVED</p>
+                    </div>
                 </div>
             </section>
             {isVisible && (
