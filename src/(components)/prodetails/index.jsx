@@ -6,7 +6,7 @@ const Prodetails = () => {
             <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8'>
                     <div className='flex flex-col justify-start'>
-                        <p className='text-xl sm:text-2xl md:text-[24px] text-[#DAC5A7] font-light mb-4 sm:mb-6'>
+                        <p className='text-xl sm:text-2xl font-solenoidal md:text-[24px] text-[#DAC5A7] font-light mb-4 sm:mb-6'>
                             Crafting Human-Centric Experiences
                         </p>
                     </div>

@@ -53,9 +53,9 @@ const Experience = () => {
                 {/* Heading section: "Journey Till Now" and "My Experience" */}
                 <div className="flex flex-col justify-between items-center w-full mb-8">
                     <div>
-                        <p className="text-lg sm:text-xl text-[#DAC5A7] mb-2">JOURNEY TILL NOW</p>
+                        {/* <p className="text-lg sm:text-xl text-[#DAC5A7] mb-2">JOURNEY TILL NOW</p> */}
                     </div>
-                    <h1 className="text-4xl sm:text-6xl lg:text-8xl text-center text-[#DAC5A7]">MY EXPERIENCE</h1>
+                    <h1 className="text-4xl sm:text-6xl lg:text-8xl text-center font-solenoidal text-[#DAC5A7]">EXPERIENCES</h1>
                 </div>
             </div>
 

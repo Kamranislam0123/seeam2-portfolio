@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="text-xl text-left pl-8 sm:text-2xl font-normal text-[#DAC5A7] mb-2 sm:mb-4">
               HELLO !
             </div>
-            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-normal text-[#DAC5A7] mb-2 sm:mb-4">
+            <h1 className="text-4xl sm:text-6xl lg:text-8xl font-solenoidal font-normal text-[#DAC5A7] mb-2 sm:mb-4">
               I&apos;M SEEAM AHMOD
             </h1>
             <div className="text-lg sm:text-xl font-italic text-[#DAC5A7]">
