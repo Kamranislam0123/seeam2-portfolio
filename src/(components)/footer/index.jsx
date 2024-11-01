@@ -73,7 +73,7 @@ const Footer = () => {
                         </a>
                     </div>
                     {/* Social Media Links */}
-                    <div className="flex justify-center space-x-8">
+                    <div className="flex flex-wrap justify-center gap-4 sm:gap-8">
                         {[
                             {
                                 href: "https://www.instagram.com/design_with_seeam",
@@ -108,18 +108,19 @@ const Footer = () => {
                                 href={social.href}
                                 className="flex items-center gap-2 hover:text-white uppercase"
                             >
-                                <div className="rounded-full  border-[#DAC5A740] border-[0.66px] bg-[#DAC5A726] p-2 flex items-center justify-center">
+                                <div className="rounded-full border-[#DAC5A740] border-[0.66px] bg-[#DAC5A726] p-1.5 sm:p-2 flex items-center justify-center">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        width="16"
-                                        height="16"
+                                        width="14"
+                                        height="14"
+                                        className="sm:w-4 sm:h-4"
                                         fill="currentColor"
                                         viewBox="0 0 16 16"
                                     >
                                         <path d={social.iconPath} />
                                     </svg>
                                 </div>
-                                <span className="text-[1.125rem]">{social.label}</span>
+                                <span className="text-sm sm:text-[1.125rem]">{social.label}</span>
                             </a>
                         ))}
                     </div>
