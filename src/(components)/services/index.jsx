@@ -22,7 +22,7 @@ const Services = () => {
                     onMouseLeave={() => setIsHovered(false)}
                 >
                     <ArrowIcon direction={isHovered ? "down" : "right"} />
-                    <h1 className="text-2xl sm:text-3xl font-bold">My Services</h1>
+                    <h1 className="text-8xl font-solenoidal  font-bold uppercase">My Expertise</h1>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">

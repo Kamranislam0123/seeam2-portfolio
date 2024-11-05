@@ -18,7 +18,7 @@ const Subbaner = () => {
   return (
     <section className="box-border py-8 sm:py-12">
       <div className="container mx-auto px-4">
-        <div className="flex flex-row justify-center items-center gap-8 sm:gap-12">
+        <div className="flex flex-row   justify-center items-center gap-8 sm:gap-12">
           {imageData.map((image, index) => (
             <div
               key={index}

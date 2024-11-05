@@ -15,9 +15,9 @@ const ClientReviews = () => {
         <section className="box-border py-8 sm:py-12">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col justify-center items-center pb-10 sm:pb-16 md:pb-20 text-center">
-                    <h1 className="text-2xl sm:text-3xl font-bold mb-2 sm:mb-4">Happy Clients</h1>
-                    <p className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
-                        CLIENTS SAYINGS
+                   
+                    <p className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-solenoidal font-bold leading-tight">
+                    CLIENTS FEEDBACK
                     </p>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -27,7 +27,7 @@ const ClientReviews = () => {
                             className="border border-solid border-[rgba(218,197,167,0.25)] bg-[rgba(218,197,167,0.05)] flex flex-col justify-between p-6 sm:p-8 h-full"
                         >
                             <div>
-                                <h2 className="text-base sm:text-lg text-[#DAC5A7] font-bold pb-2">{review.name}</h2>
+                                <h2 className="text-base sm:text-lg font-solenoidal text-[#DAC5A7] font-bold ">{review.name}</h2>
                                 <p className="text-sm sm:text-base text-[#DAC5A7] font-light">{review.designation}</p>
                                 <p className="text-sm sm:text-base text-[#DAC5A7] font-light mt-4">{review.review}</p>
                             </div>

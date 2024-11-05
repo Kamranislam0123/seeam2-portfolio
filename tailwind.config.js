@@ -6,7 +6,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-poppins)'],
+        'poppins': ['var(--font-poppins)'],
+        'solenoidal': ['var(--font-solenoidal)'],
+        'franie': ['var(--font-franie)'],
       },
       colors: {
         primary: '#DAC5A7',
@@ -21,6 +23,16 @@ module.exports = {
         bold: '700',
         extrabold: '800',
         black: '900',
+        'franie-light': 300,
+      },
+      screens: {
+        'xs': '480px', // Custom screen size
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px',
+        // Add more custom sizes as needed
       },
     },
   },

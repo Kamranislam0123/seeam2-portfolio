@@ -34,7 +34,7 @@ const Projects = () => {
     <section className="box-border py-8 sm:py-12" id="projects">
       <div className="container mx-auto px-4">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center w-full mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#DAC5A7] mb-4 sm:mb-0">MY PROJECTS</h1>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#DAC5A7] mb-4 font-solenoidal sm:mb-0">MY PROJECTS</h1>
           <div className="flex flex-row items-center gap-2">
             <ArrowIcon className="w-5 h-5 sm:w-6 sm:h-6" />
             <div className="text-lg sm:text-xl lg:text-2xl font-bold text-[#DAC5A7]">
